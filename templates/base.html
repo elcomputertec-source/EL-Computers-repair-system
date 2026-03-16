@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>EL COMPUTERS & ELECTRONICS</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<a href="https://wa.me/265983982154" class="whatsapp-float" target="_blank">
+💬
+</a>
+<body>
+
+<nav class="navbar">
+<ul>
+<div class="logo-area">
+<img src="{{ url_for('static', filename='images/logo.png') }}" class="logo">
+<li><a href="/">HOME</a></li>
+<li><a href="/book">BOOK REPAIR</a></li>
+<li><a href="/track">TRACK REPAIR</a></li>
+<li><a href="/admin">ADMIN</a></li>
+<li><a href="/technician">TECHNICIAN</a></li>
+<li><a href="/analytics">ANALYTICS</a></li>
+</div>
+</ul>
+</nav>
+
+<body>
+
+<main>
+
+{% block content %}{% endblock %}
+
+</main>
+<footer>
+
+<p><strong><i>El Computers & Electronics</i></strong>|<i>Digital Mind in a Digital World🌍</i>|<gap=30>📞 0983982154 / 0882797164</gap></p>
+
+
+<div class="socials">
+
+<a href="https://wa.me/265983982154" target="_blank">
+WhatsApp
+</a>
+
+<a href="https://facebook.com/" target="_blank">
+Facebook
+</a>
+
+</div>
+
+</footer>
+
+</body>
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

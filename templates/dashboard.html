@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 style="text-align:center;">EL COMPUTERS & ELECTRONICS</h2>
+
+<div class="stats">
+
+<div class="card">
+<h3>Total Repairs</h3>
+<p>{{total}}</p>
+</div>
+
+<div class="card">
+<h3>Completed</h3>
+<p>{{completed}}</p>
+</div>
+
+<div class="card">
+<h3>Repairing</h3>
+<p>{{repairing}}</p>
+</div>
+
+</div>
+
+<form method="GET" action="/search">
+
+<input name="phone" placeholder="Search by phone">
+
+<button type="submit">Search</button>
+
+</form>
+
+
+<tr>
+<th>Repair ID</th>
+<th>Name</th>
+<th>Phone</th>
+<th>Device</th>
+<th>Problem</th>
+<th>Status</th>
+<th>Update</th>
+</tr>
+
+{% for repair in repairs %}
+
+<tr>
+
+<td>{{repair[1]}}</td>
+<td>{{repair[2]}}</td>
+<td>{{repair[3]}}</td>
+<td>{{repair[4]}}</td>
+<td>{{repair[5]}}</td>
+<td>{{repair[6]}}</td>
+
+<td>
+
+<form action="/update/{{ repair[1] }}" method="POST">
+
+<select name="status">
+
+<option value="Received">Received</option>
+
+<option value="Diagnosing">Diagnosing</option>
+
+<option value="Repairing">Repairing</option>
+
+<option value="Waiting Parts">Waiting Parts</option>
+
+<option value="Completed">Completed</option>
+
+<option value="Ready for Pickup">Ready for Pickup</option>
+
+</select>
+
+<button type="submit">Update</button>
+
+</form>
+
+</select>
+
+<button>Update</button>
+
+</form>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

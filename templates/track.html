@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Track Your Repair</h2>
+
+<form method="POST">
+<input type="text" name="repair_id" placeholder="Enter Repair ID" required>
+<button type="submit">Track</button>
+</form>
+
+{% if repair %}
+
+<h3>Repair Details</h3>
+
+<p><b>Repair ID:</b> {{ repair[1] }}</p>
+<p><b>Customer:</b> {{ repair[2] }}</p>
+<p><b>Device:</b> {{ repair[4] }}</p>
+<p><b>Problem:</b> {{ repair[5] }}</p>
+<p><b>Status:</b> {{ repair[6] }}</p>
+
+{% else %}
+
+{% if request.method == "POST" %}
+<p style="color:red;">Repair ID not found.</p>
+{% endif %}
+
+{% endif %}
+
+{% endblock %}

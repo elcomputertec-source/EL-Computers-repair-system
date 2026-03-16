@@ -1,0 +1,1 @@
+console.log("EL COMPUTERS & ELECTRONICS website loaded");

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Technician Repair Panel</h2>
+
+<table>
+
+<tr>
+<th>Repair ID</th>
+<th>Customer</th>
+<th>Device</th>
+<th>Problem</th>
+<th>Status</th>
+</tr>
+
+{% for repair in repairs %}
+
+<tr>
+
+<td>{{repair[1]}}</td>
+<td>{{repair[2]}}</td>
+<td>{{repair[4]}}</td>
+<td>{{repair[5]}}</td>
+<td>{{repair[6]}}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Repair Invoice</h2>
+
+<p>Repair ID: {{repair[1]}}</p>
+<p>Name: {{repair[2]}}</p>
+<p>Phone: {{repair[3]}}</p>
+<p>Device: {{repair[4]}}</p>
+<p>Problem: {{repair[5]}}</p>
+<p>Status: {{repair[6]}}</p>
+
+<button onclick="window.print()">Print Invoice</button>
+
+{% endblock %}

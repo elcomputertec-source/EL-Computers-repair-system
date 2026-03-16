@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="booking">
+
+<h2>Book a Repair</h2>
+
+<form method="POST" class="repair-form">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="text" name="phone" placeholder="Phone Number" required>
+
+<input type="text" name="device" placeholder="Device (Laptop / Phone / Printer)" required>
+
+<textarea name="problem" placeholder="Describe the problem"></textarea>
+
+<button type="submit">Submit Repair</button>
+
+</form>
+
+</section>
+
+{% endblock %}
